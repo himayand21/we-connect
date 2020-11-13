@@ -1,0 +1,608 @@
+.light-spinner {
+	$primaryTextColor:rgb(63, 147, 177);
+	background-color: $primaryTextColor;
+}
+
+.wc-light {
+	$primaryBg: rgba(255, 255, 255, 1);
+	$secondaryBg: rgb(245, 245, 245);
+	$inverseBg: rgba(0, 0, 0, 1);
+
+	$border: rgba(211, 211, 211, 0.7);
+	$secondaryBorder: rgba(225, 225, 225, 0.7);
+
+	$primaryTextColor:rgb(63, 147, 177);
+	$secondaryTextColor: rgb(36, 107, 133);
+
+	$buttonBg: rgb(245, 245, 245);
+	$buttonHoverBg: rgb(235, 235, 235);
+	$secondaryButton: rgb(120, 120, 120);
+	$secondaryButtonHoverBg: rgb(108, 108, 108);
+
+	$noResultsColor: rgb(107, 107, 107);
+	$tickColor: rgb(177, 177, 177);
+
+	$imageBg: rgba(230, 230, 230, 0.7);
+	$imageCaption: rgb(120, 120, 120);
+
+	$messageDate: rgb(55, 55, 55);
+	$goDownBg: rgba(255, 255, 255, 0.8);
+	$goDownUnreadBg: rgba(63, 147, 177, 0.8);
+
+	$contactHover: rgba(230, 230, 230, 0.3);
+	$messagePrefix: darkgray;
+
+	$imageSpinnerBg: rgba(230, 230, 230, 0.7);
+
+	$modalBg: rgba(0, 0, 0, 0.2);
+	$modalWarning: rgb(95, 95, 95);
+
+	$navBarInactive: rgb(128, 128, 128);
+
+	$staticName: rgb(196, 196, 196);
+	$staticInfo: lightgray;
+
+	$fromReplyBg: rgba(100, 100, 100, 0.1);
+	$toReplyBg: rgba(0, 0, 0, 0.1);
+
+	// common-style
+	background-color: $primaryBg;
+	.message-options, .reply-message {
+		background-color: $primaryBg;
+	}
+	.reply-message .reply-wrapper {
+		background-color: $secondaryBorder;
+		border: 1px solid $border;
+		.reply-header {
+			color: $primaryTextColor;
+		}
+		.reply-name {
+			color: $inverseBg;
+		}
+		.reply-details {
+			color: $secondaryButton;
+		}
+		.reply-close-icon {
+			color: $primaryTextColor;
+			&:hover {
+				color: $secondaryTextColor;
+			}
+		}
+	}
+
+	//theme
+	.wc-button {
+		color: $primaryTextColor;
+		background-color: $buttonBg;
+		// border: 1px solid $border;
+
+		&:hover {
+			background-color: $buttonHoverBg;
+		}
+
+		&.wc-negate {
+			color: $secondaryButton;
+
+			&:hover {
+				color: $secondaryButtonHoverBg;
+			}
+		}
+	}
+	.wc-image {
+		background-color: $imageBg;
+		border: 1px solid $border;
+
+		&+.wc-image-caption {
+			color: $imageCaption;
+		}
+	}
+	.wc-label {
+		color: $primaryTextColor;
+		background-color: $primaryBg;
+
+		&:not(.wc-contact-info):hover {
+			color: $secondaryTextColor;
+		}
+		&.wc-contact-info {
+			span:hover {
+				color: $secondaryTextColor;
+				cursor: pointer;
+			}
+		}
+	}
+	.wc-icon {
+		background-color: $buttonBg;
+		color: $secondaryButton;
+		// border: 1px solid $border;
+
+		&:not(.wc-close-icon):hover {
+			background-color: $buttonHoverBg;
+		}
+	}
+	.wc-input-wrapper {
+		background-color: $secondaryBg;
+		border-width: 0px;
+		input {
+			background-color: transparent;
+			color: $inverseBg;
+		}
+	}
+	.wc-icons-wrapper {
+		.wc-close-icon {
+			i {
+				color: $primaryTextColor;
+				&:hover {
+					color: $secondaryTextColor;
+				}
+			}
+		}
+	}
+
+	//modal
+	.modal-wrapper {
+		background-color: $modalBg;
+		.modal {
+			background-color: $primaryBg;
+			.modal-header {
+				color: $inverseBg;
+				.modal-close-button {
+					color: $primaryTextColor;
+					background-color: $primaryBg;
+
+					&:hover {
+						color: $secondaryTextColor;
+					}
+				}
+			}
+			.modal-body-container {
+				.preview-img-wrapper {
+					background-image: url("../assets/camera.png");
+				}
+				.share-img {
+					box-shadow: 0 2px 8px 0px $border;
+					background-image: url("../assets/camera.png");
+				}
+				.remove-button {
+					background: $imageBg;
+				}
+				.modal-form-item {
+					.modal-form-label {
+						color: $secondaryTextColor;
+					}
+					.modal-form-input {
+						color: $inverseBg;
+						background-color: $primaryBg;
+					}
+				}
+				.modal-textarea-footer {
+					color: $secondaryButton;
+				}
+				.modal-footer {
+					.modal-warning {
+						color: $modalWarning;
+					}
+					.modal-progress-spinner {
+						background-color: $primaryBg;
+					}
+				}
+			}
+		}
+	}
+
+	//popup-modal
+	.emoji-modal {
+		background: $primaryBg;
+		border: 1px solid $border;
+
+		&::before, &::after {
+			border-color: transparent;
+		}
+		&::before {
+			border-top-color: $border;
+		}
+		&::after {
+			border-top-color: $primaryBg;
+		}
+		.emoji-picker nav {
+			background-color: transparent;
+		}
+	}
+	.attachment-modal {
+		border: 1px solid $border;
+		background: $primaryBg;
+		i {
+			color: $secondaryButton;
+		}
+
+		&::before, &::after {
+			border-color: transparent;
+		}
+		&::before {
+			border-top-color: $border;
+		}
+		&::after {
+			border-top-color: $primaryBg;
+		}
+	}
+
+	//navbar
+	.nav-container {
+		background: $primaryBg;
+    	border-bottom: solid 1px $secondaryBorder;
+		.nav-brand {
+			color: $primaryTextColor;
+		}
+		.nav-list-wrapper {
+			.nav-list-item {
+				border-bottom: 3px solid $primaryBg;
+				.nav-link {
+					span {
+						color: $navBarInactive;
+					}
+				}
+				&:not(.active-list):hover {
+                	.nav-link span {
+                    	color: $primaryTextColor;
+                	}
+				}
+				&.active-list {
+					border-bottom: 3px solid $primaryTextColor;
+
+					.nav-link span {
+						color: $primaryTextColor
+					}
+				}
+			}
+		}
+		.nav-menu {
+			.nav-menu-icon {
+				i {
+					color: $primaryTextColor;
+				}
+				&:hover i {
+					color: $secondaryTextColor;
+				}
+			}
+		}
+		.nav-menu-modal {
+			border: 1px solid $border;
+			background-color: $primaryBg;
+			.wc-contact-wrapper {
+				border-bottom: 1px solid $secondaryBorder;
+				.arrow-right-profile {
+					color: $primaryTextColor;
+				}
+			}
+			&::before, &::after {
+				border-color: transparent;
+			}
+			&::before {
+				border-bottom-color: $border;
+			}
+			&::after {
+				border-bottom-color: $primaryBg;
+			}
+			.nav-menu-link {
+				span {
+					color: $secondaryButton;
+					&:hover {
+						color: $primaryTextColor
+					}
+				}
+			}
+		}
+		.nav-link, .nav-menu-icon {
+			color: $primaryBg;
+		}
+	}
+
+	//search-box
+	.search-box {
+		.search-icon {
+			border-left: 1px solid $border;
+			color: $secondaryButton;
+		}
+	}
+
+	//static-contact
+	.static-contact-buddy {
+		.static-buddy-img {
+			background-color: $imageBg;
+        	border: 1px solid $border;
+		}
+		.static-buddy-details-wrapper {
+			.static-buddy-details {
+				.static-buddy-name {
+					background-color: $staticName
+				}
+				.static-buddy-text {
+					background-color: $staticInfo;
+				}
+			}
+		}
+	}
+	//contacts
+	.wc-contact {
+		&:hover:not(.wc-request-contact):not(.wc-selected-contact) {
+			background-color: $contactHover;
+		}
+		&.wc-selected-contact {
+			.wc-contact-wrapper {
+				border: 1px solid $border;
+				background-color: $secondaryBorder;
+			}
+		}
+	}
+	.wc-contact-wrapper {
+		.image-spinner {
+			background-color: $imageSpinnerBg;
+		}
+		.wc-contact-details {
+			.wc-contact-name {
+				color: $inverseBg;
+			}
+			.wc-contact-typing {
+				color: $primaryTextColor;
+			}
+			.wc-contact-info {
+				&:not(.wc-label) {
+					color: $secondaryButton;
+					.message-prefix {
+						color: $messagePrefix;
+					}
+				}
+			}
+		}
+		.buddy-date-wrapper {
+			.buddy-date {
+				color: $secondaryButton;
+			}
+			.buddy-unread {
+				background-color: $primaryTextColor;
+				color: $primaryBg;
+			}
+		}
+	}
+
+	// current-receiver
+	.wc-current-contact {
+		border-bottom: 1px solid $secondaryBorder;
+		.wc-back-button {
+			color: $primaryTextColor;
+			
+			&:hover {
+				color: $secondaryTextColor;
+			}
+		}
+	}
+
+	// profile
+	.profile {
+		.requests-container {
+			.people-container {
+				.requests-label {
+					color: $primaryTextColor;
+					&:hover {
+						color: $primaryTextColor;
+					}
+				}
+				.find-friends-label {
+					color: $secondaryButton;
+					&:hover {
+						color: $primaryTextColor;
+					}
+				}
+				&.prople-container-forward {
+					.requests-label {
+						color: $primaryTextColor;
+						&:hover {
+							color: $primaryTextColor;
+						}
+					}
+					.find-friends-label {
+						color: $secondaryButton;
+						&:hover {
+							color: $primaryTextColor;
+						}
+					}
+				}
+				&.people-container-reverse {
+					.requests-label {
+						color: $secondaryButton;
+						&:hover {
+							color: $primaryTextColor;
+						}
+					}
+					.find-friends-label {
+						color: $primaryTextColor;
+						&:hover {
+							color: $primaryTextColor;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//requests-wrapper
+	.requests-wrapper {
+		.request-container {
+			.request-contacts {
+				border-bottom: 1px solid $border;
+			}
+		}
+	}
+
+	//forward-box
+	.forward-box {
+		background: $buttonBg;
+		color: $inverseBg;
+		border: solid 1px $border;
+		
+		&~.contact-heads {
+			.contact-head {
+				.tick-image {
+					background-color: rgba(120, 120, 120, 0.5);
+					color: white;
+				}
+			}
+			.contact-not-found {
+				color: rgb(120, 120, 120);
+			}
+		}
+	}
+
+	//chat-room
+	.chat-screen {
+		border-left: 1px solid $secondaryBorder;
+		border-right: 1px solid $secondaryBorder;
+		.chat-go-down {
+			i, span {
+				box-shadow: 0 2px 10px 0px $border;
+			}
+			i {
+				color: $secondaryButtonHoverBg;
+				background-color: $goDownBg;
+				box-shadow: 0 2px 8px 0px $border;
+
+				&:hover {
+					background-color: $primaryBg;
+				}
+			}
+			span {
+				background-color: $goDownUnreadBg;
+				color: $primaryBg;
+			}
+		}
+	}
+	.chat-message-date {
+		color: $secondaryButton;
+	}
+	.chat-message-seen {
+		color: $primaryTextColor;
+	}
+	.chat-message-unread {
+		color: $primaryTextColor;
+		span {
+			background-color: $primaryBg;
+		}
+		&:before {
+			border-top: solid 1px $secondaryBorder;
+		}
+	}
+	.tick-wrapper {
+		color: $tickColor;
+	}
+	.message-from-wrapper {
+		.chat-message {
+			background-color: $buttonBg;
+			color: $inverseBg;
+
+			.reply-box {
+				background-color: $fromReplyBg;
+			}
+
+			.message-date {
+				color: $messageDate;
+			}
+			.message-link {
+				color: $primaryTextColor;
+				&:hover {
+					color: $secondaryTextColor;
+				}
+			}
+		}
+	}
+	.message-to-wrapper {
+		.chat-message {
+			color: $primaryBg;
+			background-color: $primaryTextColor;
+
+			.reply-box {
+				background-color: $toReplyBg;
+			}
+			.message-date {
+				color: $primaryBg;
+			}
+			.message-link {
+				color: $buttonHoverBg;
+				&:hover {
+					color: $buttonBg;
+				}
+			}
+		}
+	}
+	.chat-message-image {
+		.chat-message {
+			background-color: transparent;
+			.reply-box {
+				color: $inverseBg;
+			}
+			.message-image-wrapper {
+				background-color: $buttonBg;
+				border: 1px solid $border;
+				background-image: url('../assets/camera.png');
+
+				.message-image {
+					background-color: $buttonBg;
+				}
+			}
+		}
+		.message-date {
+			color: $secondaryButton !important;
+		}
+	}
+	.message-to-wrapper + .message-from-wrapper .chat-message,
+	.message-from-wrapper:first-child .chat-message,
+	.chat-message-date + .message-from-wrapper .chat-message,
+	.chat-message-unread + .message-from-wrapper .chat-message,
+	.chat-message-seen + .message-from-wrapper .chat-message {
+		&::before {
+			border-left: 5px solid $buttonBg;
+			border-right: 5px solid transparent;
+			border-top: 5px solid $buttonBg;
+			border-bottom: 5px solid transparent;
+		}
+	}
+
+	.message-from-wrapper + .message-to-wrapper .chat-message,
+	.message-to-wrapper:first-child .chat-message,
+	.chat-message-date +.message-to-wrapper .chat-message,
+	.chat-message-unread + .message-to-wrapper .chat-message,
+	.chat-message-seen + .message-to-wrapper .chat-message {
+		&::before {
+				border-right: 5px solid $primaryTextColor;
+				border-left: 5px solid transparent;
+				border-top: 5px solid $primaryTextColor;
+				border-bottom: 5px solid transparent;
+		}
+	}
+	.chat-send {
+		border-top: 1px solid $secondaryBorder;
+		background-color: $primaryBg;
+		.wc-input-wrapper {
+			.emoji-icon, .paperclip-icon {
+				color: $secondaryButton;
+			}
+			.active-emoji {
+				color: $primaryTextColor;
+			}
+		}
+	}
+
+	//footer
+	.footer {
+		color: $secondaryButton;
+		background-color: $primaryBg;
+		border-top: 1px solid $secondaryBorder;
+		i {
+	        color: $primaryTextColor;
+		}
+	}
+	@media only screen and (max-width: 1100px) {
+		.chat-screen {
+			background: $primaryBg;
+		}
+	}
+}
+

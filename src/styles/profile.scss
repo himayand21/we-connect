@@ -1,0 +1,92 @@
+.profile-hidden {
+    width: 0px;
+    opacity: 0;
+    transition: width 0.3s 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.profile {
+	width: 350px;
+	opacity: 1;
+	transition: opacity 0.2s 0.3s ease-in-out, width 0.3s ease-in-out;
+	display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+
+    .requests-container {
+        flex: 1;
+
+        .people-container {
+            padding: 15px 15px 0px;
+            height: 20px;
+			position: relative;
+
+            span {
+                line-height: 20px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .requests-label {
+                font-size: 17px;
+				position: absolute;
+				left: 15px;
+				cursor: default;
+				transition: all 0.3s ease-in-out;
+            }
+			.find-friends-label {
+				font-size: 13px;
+				position: absolute;
+				left: calc(100% - 90px);
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+			}
+
+			&.people-container-forward {
+				.requests-label {
+					font-size: 17px;
+					left: 15px;
+					animation: none;
+					cursor: default;
+				}
+				.find-friends-label {
+					font-size: 13px;
+					position: absolute;
+					left: calc(100% - 90px);
+					animation: fadeInOut 0.3s alternate;
+					cursor: pointer;
+				}
+			}
+			&.people-container-reverse {
+				.find-friends-label {
+					left: 15px;
+					font-size: 17px;
+					animation: none;
+					cursor: default;
+				}
+				.requests-label {
+					font-size: 13px;
+					left: calc(100% - 115px);
+					animation: fadeInOut 0.3s alternate;
+					cursor: pointer;
+				}
+			}
+        }
+    }
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

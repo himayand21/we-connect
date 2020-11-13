@@ -1,0 +1,70 @@
+.chat-send {
+	display: flex;
+	min-height: 60px;
+	width: 100%;
+	margin-left: -10px;
+	padding-left: 10px;
+	overflow: hidden;
+	align-items: center;
+	flex-direction: row-reverse;
+
+    .chat-send-button-wrapper {
+        margin-right: 10px;
+        width: 46px;
+        height: 46px;
+        transition: 0.2s linear;
+        opacity: 1;
+
+		.wc-button {
+			height: 100%;
+			width: 100%;
+		}
+
+        &.hidden-chat-send-button {
+            margin-right: -41px;
+            transition: 0.2s linear;
+            opacity: 0;
+			visibility: hidden;
+
+            &~.wc-input-wrapper .attachment-modal {
+                right: 7px;
+            }
+        }
+    }
+
+    .wc-input-wrapper {
+        margin-right: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: 44px;
+
+        .chat-input {
+            width: 100%;
+        }
+        .emoji-icon, .paperclip-icon {
+            display: flex;
+            align-items: center;
+            height: 20px;
+            padding: 10px;
+            padding-left: 0px;
+            font-size: 23px;
+            i {
+                cursor: pointer;
+            }
+        }
+        .paperclip-icon {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+		.emoji-icon {
+			path:nth-child(2) {
+				fill: transparent;
+			}
+		}
+        .active-emoji {
+			path:nth-child(2) {
+				fill: transparent;
+			}
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.chat-screen-wrapper {
+	width: 100%;
+	display: flex;
+	height: calc(100vh - 82px);
+	overflow: hidden;
+
+	.contacts {
+		flex: 1;
+		height: calc(100vh - 82px);
+		overflow: hidden;
+		min-width: 350px;
+
+		.contacts-wrapper {
+			height: calc(100vh - 140px);
+			overflow-y: auto;
+
+			.wc-contact {
+				&:last-child {
+					margin-bottom: 60px;
+				}
+			}
+		}
+	}
+}

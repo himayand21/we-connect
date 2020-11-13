@@ -1,0 +1,24 @@
+.search-box {
+	padding: 6px 10px;
+	display: flex;
+	align-items: center;
+    position: relative;
+    
+    .wc-input-wrapper {
+        padding: 2px 15px;
+
+        input {
+            flex: 1;
+            font-size: 15px;
+        }
+    }
+    .search-icon {
+        height: 20px;
+        padding: 5px 10px;
+        padding-right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		font-size: 15px;
+    }
+}

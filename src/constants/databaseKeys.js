@@ -1,0 +1,12 @@
+export const USER_DATA = 'user_data';
+export const MESSAGES = 'messages';
+export const POSTS = 'posts';
+export const CONNECTIONS = 'connections';
+export const LATEST = 'latest';
+export const REQUESTS = 'requests';
+export const SENT = 'sentRequests';
+export const LAST_SEEN = 'lastSeen';
+export const LAST_SENT = 'lastSent';
+export const TYPING = 'typing';
+export const UNREAD_COUNT = 'unreadCount';
+export const TOKEN = 'token';

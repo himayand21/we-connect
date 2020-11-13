@@ -1,0 +1,44 @@
+$bar-color-light: #fff;
+$ball-color-light: #fff;
+
+.loading-wrapper {
+	height: 100vh;
+	overflow: hidden;
+	width: 100vw;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+
+    .loading-text {
+        margin-top: 30px;
+        font-size: 23px;
+		color: #fff;
+    }
+
+    .reload-button {
+        padding: 10px 20px;
+        margin-top: 70px;
+        color: white;
+        background: transparent;
+        font-size: 18px;
+        border-radius: 4px;
+        border: white 1px solid;
+        transition: 0.5s;
+
+        &:hover {
+            cursor: pointer;
+            color: rgb(63, 147, 177);
+            background-color: white;
+        }
+
+        &.hidden {
+            height: 15px;
+        }
+    }
+}

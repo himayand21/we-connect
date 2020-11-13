@@ -1,0 +1,14 @@
+export const SAVE_USER = 'SAVE_USER';
+export const RESET_USER = 'RESET_USER';
+export const SHOW_SPINNER = 'SHOW_SPINNER';
+export const HIDE_SPINNER = 'HIDE_SPINNER';
+export const ADD_NEW_RECEIVER = 'ADD_NEW_RECEIVER';
+export const RESET_RECEIVERS = 'RESET_RECEIVERS';
+export const UPDATE_CHANGED_RECEIVER = 'UPDATE_CHANGED_RECEIVER';
+export const SET_ACTIVE = 'SET_ACTIVE';
+export const OPEN_MODAL = 'OPEN_MODAL';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
+export const UPDATE_LATEST = 'UPDATE_LATEST';
+export const SET_USER_DETAILS = 'SET_USER_DETAILS';
+export const CHANGE_THEME = 'CHANGE_THEME';
+export const SET_THEME = 'SET_THEME';

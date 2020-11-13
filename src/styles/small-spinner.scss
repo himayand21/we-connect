@@ -1,0 +1,186 @@
+$blue: rgb(63, 147, 177);
+$white: white;
+$backdropMulti: #f1b500;
+
+.small-spinner {
+
+	position: relative;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+
+	.ball-1 {
+		position: absolute;
+		top: 0px;
+		border-radius: 50%;
+		animation: animation-white 1.25s linear 0s infinite normal none running;
+	}
+	.ball-2 {
+		position: absolute;
+		top: 0px;
+		border-radius: 50%;
+		animation: animation-white 1.25s linear 0.15s infinite normal none running;
+	}
+	.ball-3 {
+		position: absolute;
+		top: 0px;
+		border-radius: 50%;
+		animation: animation-white 1.25s linear 0.25s infinite normal none running;
+	}
+}
+
+.small-spinner.blue {
+
+	.ball-1,
+	.ball-2,
+	.ball-3 {
+		background-color: $blue;
+		animation-name: animation-blue;
+	}
+}
+
+.small-spinner.white {
+
+	.ball-1,
+	.ball-2,
+	.ball-3 {
+		background-color: $white;
+		animation-name: animation-white;
+	}
+}
+.small-spinner.multi {
+
+	.ball-1,
+	.ball-2,
+	.ball-3 {
+		background-color: $backdropMulti;
+	}
+	.ball-1 {
+		animation-name: animation-multicolor-ball1;
+	}
+	.ball-2 {
+		animation-name: animation-multicolor-ball2;
+	}
+	.ball-3 {
+		animation-name: animation-multicolor-ball3;
+	}
+}
+@keyframes animation-blue {
+
+	0% {
+		transform: scale(1);
+		animation-timing-function: cubic-bezier(1, 0, 0.7, 1);
+		background: rgb(235, 235, 235);
+	}
+	40% {
+		transform: scale(1.5);
+		animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
+		background: $blue;
+	}
+	72% {
+		transform: scale(1);
+		animation-timing-function: linear;
+		background: rgb(235, 235, 235);
+	}
+	100% {
+		transform: scale(1);
+		background: rgb(235, 235, 235);
+	}
+
+}
+
+@keyframes animation-white {
+
+	0% {
+		transform: scale(1);
+		animation-timing-function: cubic-bezier(1, 0, 0.7, 1);
+		background: rgb(235, 235, 235);
+	}
+	40% {
+		transform: scale(1.5);
+		animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
+		background: $white;
+	}
+	72% {
+		transform: scale(1);
+		animation-timing-function: linear;
+		background: rgb(235, 235, 235);
+	}
+	100% {
+		transform: scale(1);
+		background: rgb(235, 235, 235);
+	}
+
+}
+
+@keyframes animation-multicolor-ball1 {
+
+	0% {
+		transform: scale(1);
+		animation-timing-function: cubic-bezier(1, 0, 0.7, 1);
+		background: $backdropMulti;
+	}
+	40% {
+		transform: scale(1.5);
+		animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
+		background: #e33e2a;
+	}
+	72% {
+		transform: scale(1);
+		animation-timing-function: linear;
+		background: $backdropMulti;
+	}
+	100% {
+		transform: scale(1);
+		background: $backdropMulti;
+	}
+
+}
+@keyframes animation-multicolor-ball2 {
+
+	0% {
+		transform: scale(1);
+		animation-timing-function: cubic-bezier(1, 0, 0.7, 1);
+		background: $backdropMulti;
+	}
+	40% {
+		transform: scale(1.5);
+		animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
+		background: #2ba24c;
+	}
+	72% {
+		transform: scale(1);
+		animation-timing-function: linear;
+		background: $backdropMulti;
+	}
+	100% {
+		transform: scale(1);
+		background: $backdropMulti;
+	}
+
+}
+@keyframes animation-multicolor-ball3 {
+
+	0% {
+		transform: scale(1);
+		animation-timing-function: cubic-bezier(1, 0, 0.7, 1);
+		background: $backdropMulti;
+	}
+	40% {
+		transform: scale(1.5);
+		animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
+		background: #397ceb;
+	}
+	72% {
+		transform: scale(1);
+		animation-timing-function: linear;
+		background: $backdropMulti;
+	}
+	100% {
+		transform: scale(1);
+		background: $backdropMulti;
+	}
+
+}

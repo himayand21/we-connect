@@ -1,0 +1,21 @@
+.ring-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  .ring-svg {
+    transform: rotate(-90deg);
+    border-radius: 50%;
+    .circle {
+      transition: all 0s;
+    }
+    .animated-circle {
+      transition: all 0.3s;
+    }
+  }
+}
+.ring-container::after {
+  content: attr(data-pct) "%";
+  position: absolute;
+}

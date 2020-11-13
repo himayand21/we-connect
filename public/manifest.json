@@ -1,0 +1,16 @@
+{
+  "short_name": "we-connect",
+  "name": "WeConnect",
+  "icons": [
+    {
+      "src": "dove.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "we-connect.netlify.com",
+  "display": "standalone",
+  "theme_color": "rgb(63, 147, 177)",
+  "background_color": "#ffffff",
+  "gcm_sender_id": "103953800507"
+}

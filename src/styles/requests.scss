@@ -1,0 +1,24 @@
+.requests-wrapper {
+	overflow-y: auto;
+    height: calc(100vh - 346px);
+
+    .request-container {
+		margin-bottom: 60px;
+        
+        .request-contacts {
+            display: flex;
+            flex-direction: row;
+            height: 100px;
+            padding: 0 15px;
+            align-items: center;
+
+            &:hover {
+                cursor: default;
+            }
+
+            &:last-child {
+                border-bottom-width: 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+
+.emoji-modal {
+	position: absolute;
+	bottom: 75px;
+	height: 334px;
+	max-width: 90vw;
+	min-width: 250px;
+	margin-left: -10px;
+	border-radius: 10px;
+    
+    .emoji-picker {
+        border-width: 0px;
+        border-radius: 10px;
+        user-select: none;
+		background-color: transparent;
+		.wrapper::after {
+			background-color: transparent;
+		}
+		.emoji-category .category-name {
+			background-color: transparent;
+		}
+		nav {
+			width: 100%;
+			left: 0;
+			padding-left: 10px;
+			right: 0;
+			padding-right: 10px;
+		}
+		.emoji-list.filter::before {
+			background-color: transparent;
+		}
+    }
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 12px;
+        border-style: solid;
+    }
+
+    &::before {
+        bottom: -18px;
+        margin-left: 0px;
+        border-width: 9px;
+    }
+
+    &::after {
+        bottom: -14px;
+        margin-left: 2px;
+        border-width: 7px;
+    }
+}
+
+.attachment-modal {
+	position: absolute;
+	bottom: 75px;
+	right: 57px;
+	height: 65px;
+	max-width: 90vw;
+    // min-width: 160px;
+	min-width: 60px;
+    padding: 5px 7px;
+	border-radius: 10px;
+    .map-marker, .doc-file {
+		font-size: 13px;
+	}
+	.camera-image {
+		font-size: 12px;
+	}
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        right: 13px;
+        border-style: solid;
+    }
+
+    &::after {
+        bottom: -15px;
+        margin-right: 1px;
+        border-width: 8px;
+    }
+
+    &::before {
+        bottom: -18px;
+        margin-left: 0px;
+        border-width: 9px;
+    }
+}

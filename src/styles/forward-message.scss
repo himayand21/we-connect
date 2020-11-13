@@ -1,0 +1,81 @@
+.forward-box {
+	border-radius: 10px;
+	overflow: hidden;
+	margin: auto;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	&.forward-message {
+		white-space: pre-wrap;
+		padding: 10px;
+		font-size: 15px;
+		text-overflow: ellipsis;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		max-height: 153px;
+	}
+
+    &~.search-box {
+        margin-top: 5px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    &~.contact-heads {
+        margin-top: 5px;
+        overflow-x: scroll;
+        display: flex;
+		height: 105px;
+    
+        .contact-head {
+            min-width: 90px;
+            max-width: 90px;
+            margin-left: 5px;
+            margin-right: 5px;
+            text-align: center;
+            position: relative;
+    
+            .wc-image, .tick-image {
+                height: 80px;
+                width: 80px;
+                margin: auto;
+    
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .tick-image {
+                position: absolute;
+                border-radius: 50%;
+                top: 0;
+				margin: 0;
+				width: 79px;
+				height: 79px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+            }
+            .wc-image-caption {
+                margin: auto;
+                margin-top: 5px;
+				white-space: nowrap; 
+  				overflow: hidden;
+  				text-overflow: ellipsis;
+				font-size: 12px;
+            }
+        }
+
+        .contact-not-found {
+            min-height: 105px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+}
+

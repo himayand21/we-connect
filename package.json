@@ -1,0 +1,53 @@
+{
+  "name": "we-connect",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "emoji-picker-react": "^2.1.1",
+    "exif-orientation": "^1.0.0",
+    "firebase": "^6.2.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "react-with-firebase-auth": "^1.0.3",
+    "valid-url": "^1.0.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "CI= react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint ."
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "src/serviceWorker.js",
+	"src/constants/firebase.js",
+	"public/firebase-messaging-sw.js",
+	"build"
+  ],
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.1.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "node-sass": "^4.12.0"
+  }
+}

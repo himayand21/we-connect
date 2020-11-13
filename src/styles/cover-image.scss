@@ -1,0 +1,52 @@
+
+.form-image {
+	display: flex;
+    background-size: cover;
+    flex: 1;
+	position: relative;
+	background: linear-gradient(to right, rgb(16, 16, 44), rgba(77, 40, 15, 0.637));
+
+	.preloader-form-image {
+		filter: blur(10px);
+		position: relative;
+		max-width: 99.5%;
+		overflow: hidden;
+	}
+	.form-image-actual{
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: opacity 1s linear;
+		max-width: 100%;
+	}
+	.visible-image{
+		opacity: 1;
+		transition: opacity 1s linear;
+	}
+    .app-title {
+        font-size: 80px;
+		position: absolute;
+        font-weight: 600;
+		letter-spacing: -2px;
+        color: white;
+        margin-top: 0.6em;
+		z-index: 99999;
+        margin-left: 9%;
+
+        &.animate-pop-in {
+            animation: pop-in .6s ease-out forwards;
+
+            @keyframes pop-in {
+                0% {
+                    opacity: 0;
+                    transform: translateY(5rem);
+                }
+                100% {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+        }
+    }
+}

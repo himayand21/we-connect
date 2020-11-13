@@ -1,0 +1,144 @@
+.nav-container {
+	display: flex;
+    min-height: 63px;
+    flex-wrap: wrap;
+
+    .nav-brand {
+        flex: 6 0 40%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+
+        .brand-name {
+            font-size: 22px;
+            margin-left: 10px;
+            font-weight: 600;
+        }
+    }
+
+    .nav-list-wrapper {
+        display: flex;
+        flex: 1;
+		position: relative;
+    
+        .nav-list-item {
+            display: flex;
+            flex: 1;
+
+            .nav-link {
+                span {
+                    text-align: center;
+                    display: block;
+                    font-size: 15px;
+                    flex: 1;
+					transition: color 0.3s linear;
+                }
+            }
+
+            &:not(.active-list):hover {
+                cursor: pointer;
+            }
+
+            &.active-list {
+                transition: 0.3s;
+    
+                &:hover .nav-link {
+                    cursor: default;
+                }
+            }
+        }   
+    }
+
+    .nav-menu {
+        display: flex;
+
+        .nav-menu-icon {
+		 	cursor: pointer;
+            i {
+                text-align: center;
+                display: block;
+                padding-top: 3px;
+                flex: 1;
+				transition: 0.3s ease-in-out;
+				font-size: 6px;
+            }
+        }
+    }
+
+	.nav-menu-modal {
+		position: absolute;
+		right: 5px;
+		top: 55px;
+		border-radius: 10px;
+		z-index: 4;
+		min-width: 100px;
+		max-width: 300px;
+
+		.wc-contact-wrapper {
+			padding: 10px;
+			border-top-left-radius: 9px;
+			border-top-right-radius: 9px;
+			width: calc(100% - 20px);
+			.wc-image {
+				height: 60px;
+				width: 60px;
+				box-sizing: content-box;
+			}
+			.wc-contact-details {
+				.wc-contact-name {
+					font-size: 15px;
+					padding-bottom: 0px;
+				}
+			}
+			.arrow-right-profile {
+				margin-left: 10px;
+				margin-right: 5px;
+				font-size: 8px;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		.nav-menu-list {
+			padding: 10px 20px;
+		}
+
+		&::before, &::after {
+			content: "";
+			position: absolute;
+			right: 8px;
+			top: 0px;
+			border-style: solid;
+		}
+
+		&::before {
+			top: -18px;
+			border-width: 9px;
+		}
+
+		&::after {
+			top: -14px;
+			margin-right: 2px;
+			border-width: 7px;
+		}
+
+		.nav-menu-link {
+			font-size: 15px;
+			padding: 5px 0;
+			span {
+				cursor: pointer;
+			}
+		}
+	}
+
+    .nav-link, .nav-menu-icon {
+        flex: 1;
+        padding: 20px;
+        text-decoration: none;
+        display: flex;
+        transition: 0.2s linear;
+    }
+	.nav-link {
+		padding: 20px 34px;
+	}
+}

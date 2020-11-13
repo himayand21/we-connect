@@ -1,0 +1,122 @@
+.wc-contact {
+    display: flex;
+    align-items: center;
+    height: 100px;
+
+	&:hover:not(.wc-request-contact):not(.wc-selected-contact) {
+		cursor: pointer;
+	}
+
+	&:last-child {
+		.wc-contact-details {
+			border-bottom-width: 0px
+		}
+	}
+
+	&.wc-selected-contact {
+		.wc-contact-wrapper {
+			width: calc(100% - 40px);
+			margin: auto;
+			height: 90%;
+			border-radius: 20px;
+			transition: width 0.4s ease-in-out, border 0.2s ease-in-out;
+
+			.contact-image {
+				width: 70px;
+				height: 70px;
+				transition: 0.2s ease-in-out;
+			}
+		}
+	}
+}
+
+.wc-contact-wrapper {
+	display: flex;
+	flex-direction: row;
+	padding: 0 5px 0 10px;
+	height: 100%;
+	align-items: center;
+	width: calc(100% - 20px);
+	border: 1px solid transparent;
+	transition: width 0.4s ease-in-out, flex-grow 0.4s 0s ease-in-out, border 0.2s ease-in-out;
+
+	.contact-image {
+		width: 80px;
+		height: 80px;
+		margin-right: 10px;
+		transition: 0.2s ease-in-out;
+
+		.image-spinner {
+			height: 101%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.wc-contact-details {
+		flex: 1;
+		overflow: hidden;
+
+		.wc-contact-name {
+			width: 100%;
+			font-size: 20px;
+			padding-bottom: 3px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		
+		.wc-contact-info {
+			padding-top: 3px;
+			font-size: 15px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			.attachment-message {
+				i {
+					margin-right: 5px;
+					margin-left: 3px;
+					svg {
+						vertical-align: middle;
+						margin-top: -2px;
+					}
+				}
+				.attachment-info-other {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+			
+	.buddy-date-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-end;
+		height: 45px;
+
+		.buddy-date {
+			font-size: 12px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		.buddy-unread {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 13px;
+			padding: 2px 10px;
+			border-radius: 2px;
+			font-weight: 600;
+			letter-spacing: -1px;
+		} 
+	}
+
+	.wc-button {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
